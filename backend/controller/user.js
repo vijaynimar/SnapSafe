@@ -43,4 +43,7 @@ const login =async(req,res)=>{
 
     }
 }
-export {signup,login}
+const getuser=async(req,res)=>{
+    res.send("hello from Backend 👋")
+}
+export {signup,login,getuser}
