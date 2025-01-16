@@ -17,13 +17,13 @@ function togglePasswordVisibility() {
 // Handle form submission and API call
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent form submission
-    
+
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    
+
     // API endpoint (replace this with your actual API endpoint)
     const apiEndpoint = "http://localhost:2999/login";
-    
+
     // Prepare request payload
     const requestPayload = {
         email: username,
@@ -40,15 +40,14 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         });
 
         const data = await response.json();
-        
+
         // If the response is successful (e.g., status code 200)
         if (response.ok) {
             // Store token in localStorage
             localStorage.setItem("authToken", data.token); // Assuming the response contains the token as 'data.token'
             
             // Redirect to a protected page (replace with your URL)
-            window.location.href = "nav.html";
-;
+            window.location.href = "dashboard.html";
         } else {
             // Display error message from API (if any)
             showError(data.message || "An error occurred, please try again.");

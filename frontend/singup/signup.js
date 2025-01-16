@@ -22,8 +22,11 @@ document.getElementById("signupForm").addEventListener("submit", async function(
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // API endpoint (replace this with your actual API endpoint)
+    // API endpoint (replace this with your actual API endpoint
     const apiEndpoint = "http://localhost:2999/signup";
+
+    // const apiEndpoint = "https://your-api-endpoint.com/signup";
+
 
     // Prepare request payload
     const requestPayload = {
@@ -46,7 +49,11 @@ document.getElementById("signupForm").addEventListener("submit", async function(
         // If the response is successful (e.g., status code 200)
         if (response.ok) {
             // Handle successful signup (e.g., redirect to login page)
+
             window.location.href = "../login/login.html"; // Redirect to login page (replace with your URL)
+
+            window.location.href = "login.html"; // Redirect to login page (replace with your URL)
+
         } else {
             // Display error message from API (if any)
             showError(data.message || "An error occurred, please try again.");
