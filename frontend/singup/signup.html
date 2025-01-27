@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapSafe - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <!-- Add Font Awesome for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="brand-logo">SnapSafe</div>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <!-- Username input -->
+                <div class="textbox">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <!-- Email input -->
+                <div class="textbox">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <!-- Password input -->
+                <div class="textbox password-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <i id="eyeIcon" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            
+            <!-- Error message container -->
+            <div id="errorMessage" class="error-message"></div>
+
+            <!-- Link to Login page for users who already have an account -->
+            <p class="login-link">Already have an account? <a href="../login/login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
